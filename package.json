@@ -1,0 +1,28 @@
+{
+  "name": "webpack-test",
+  "version": "1.0.0",
+  "description": "my webpack study",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuanmanrong/webpack-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuanmanrong/webpack-test/issues"
+  },
+  "homepage": "https://github.com/yuanmanrong/webpack-test#readme",
+  "devDependencies": {
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.8.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
