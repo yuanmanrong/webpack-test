@@ -48,3 +48,7 @@ webpack-dev-middleware:是一个封装器(wrapper)，它可以把 webpack 处理
 生产环境关注点在于压缩 bundle、更轻量的 source map、资源优化等，通过这些优化改善加载时间。
 因此不同的环境编写彼此独立的 webpack 配置。
 webpack-merge 工具用来将 common 和独立环境合并。
+指定 mode 通过与 process.env.NODE_ENV 环境变量关联，NODE_ENV 是一个由 node.js 暴露给执行脚本的系统环境变量，用来决定在不同的环境下的不同行为。
+任何位于 /src 的本地代码都可以关联到 process.env.NODE_ENV 环境变量
+minification(压缩)：设置 production mode 配置后，webpack v4+ 会默认压缩你的代码。
+在生产环境中使用 source-map,而不是开发环境下的 inline-source-map,因为这样会增加 bundle 的体积大小，并降低整体性能。
