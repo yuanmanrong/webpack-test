@@ -52,3 +52,21 @@ webpack-merge 工具用来将 common 和独立环境合并。
 任何位于 /src 的本地代码都可以关联到 process.env.NODE_ENV 环境变量
 minification(压缩)：设置 production mode 配置后，webpack v4+ 会默认压缩你的代码。
 在生产环境中使用 source-map,而不是开发环境下的 inline-source-map,因为这样会增加 bundle 的体积大小，并降低整体性能。
+
+## 代码分离
+
+此特性能把代码分离到不同的 bundle 中，然后可以按需加载或者并行加载这些文件。代码分离可以用于获取更小的 bundle,以及控制资源加载优先级，可以很好的优化加载时间。
+代码分离的三种方法： 1.通过入口起点 entry 配置，但是会存在重复模块的引用。我们可以通过使用 SplitChunkPlugin 插件来移除重复模块。 2.防止重复，使用 SplitChunksPlugin 去重和分离 chunk，将公共的依赖模块提取到已有的 entry chunk 中。 3.动态导入，使用 import（）语法或者 require.ensure 实现动态导入。
+
+## 懒加载
+
+此特性能把代码分离到不同的 bundle 中，然后可以按需加载或者并行加载这些文件。代码分离可以用于获取更小的 bundle,以及控制资源加载优先级，可以很好的优化加载时间。
+代码分离的三种方法： 1.通过入口起点 entry 配置，但是会存在重复模块的引用。我们可以通过使用 SplitChunkPlugin 插件来移除重复模块。 2.防止重复，使用 SplitChunksPlugin 去重和分离 chunk，将公共的依赖模块提取到已有的 entry chunk 中。 3.动态导入，使用 import（）语法或者 require.ensure 实现动态导入。
+
+## 懒加载
+
+通过必要的配置以确保 webpack 编译生成的文件能够被客户端缓存，而在文件内容变化后，能够请求到新的文件。
+
+## 创建 library
+
+通过必要的配置以确保 webpack 编译生成的文件能够被客户端缓存，而在文件内容变化后，能够请求到新的文件。
